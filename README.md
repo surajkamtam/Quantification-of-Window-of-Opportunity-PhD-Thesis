@@ -1,4 +1,4 @@
-# Quantification-of-Window-of-Opportunity-PhD-Thesis
+# Threat Analysis and Probabilistic Quantification of Cyber-attack occurrence on Connected Vehicles using Window of Opportunity
 
 This repository provides the code used for prior and posterior information, along with the datasets used for the Bluetooth and DSRC case study.   
 
