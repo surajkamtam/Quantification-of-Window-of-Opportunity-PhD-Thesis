@@ -2,6 +2,17 @@
 
 This repository provides the code used for prior and posterior information, along with the datasets used for the Bluetooth and DSRC case study.   
 
+
+## WOLVES framework
+
+
+## Law of Total Probability
+
+### Add some diagrams, equations, and algorithms
+
+
+
+
 ## Prior information processing
 The data has been collected from Highways England. Then, Data cleaning, processing and PCU factor conversion have been performed for the selected 3 months of data. 
 
