@@ -1,2 +1,0 @@
-LOS,DepartureTime,Iteration,TP,FP,FN,TN,PD,FAR,F1,AUC,Anomaly_Prob,Time_sec
-A,900.0,15.5,20.0,36.0,0.0,48.0,100.0,41.8861,0.5185,0.8472,0.5238,1.5978

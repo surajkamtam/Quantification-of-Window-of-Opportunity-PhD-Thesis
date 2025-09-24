@@ -1,9 +1,0 @@
-# Folders
-scenario/results/
-.vscode/
-
-# Files
-*_m.h
-*_m.cc
-.cmdenv-log
-.qtenvrc
