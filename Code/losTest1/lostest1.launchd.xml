@@ -1,0 +1,8 @@
+<launch>
+    <copy file="lostest1.net.xml" />
+    <copy file="lostest1.rou.xml" />
+    <copy file="lostest1.add.xml" />
+    <copy file="lostest1.sumo.cfg" type="config" />
+    <seed value="39" />
+    
+</launch>
