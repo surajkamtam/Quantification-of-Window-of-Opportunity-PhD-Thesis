@@ -76,7 +76,7 @@ Additional
 ### Running Notebook 
 
 
-### Citation (BibTeX)
+### Citation 
 ```bibtex
 @article{kamtam2025wolves,
   title={WOLVES: Window of Opportunity attack feasibility likelihood value estimation through a simulation-based approach},
