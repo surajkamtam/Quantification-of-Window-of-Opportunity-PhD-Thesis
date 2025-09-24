@@ -1,0 +1,81 @@
+#include "veins/modules/application/traci/MyVeinsApp.h"
+#include "veins/modules/application/traci/TraCIDemo11pRSUMessage_m.h"
+#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+
+#include <fstream>
+#include <vector>
+#include <iterator>
+#include <cstdlib>
+#include <string>
+#include <iostream>
+#include <unordered_map>
+
+using namespace veins;
+using namespace std;
+
+Define_Module(veins::MyVeinsApp);
+
+Coord vPos;
+std::string vehicleid;
+double vdistance, intdistance, targetdistance;
+double vtSpeed;
+Coord hackerposition, connectedposition;
+
+// Data structure to hold detected intermediate vehicles (iX) and their positions
+unordered_map<string, Coord> intermediateVehicles;
+unordered_map<string, Coord> vehiclesInfo;
+
+// Using ofstream with RAII for efficient file handling
+ofstream out("out.txt", ios::out | ios::trunc);
+ofstream test("test.txt", ios::out | ios::trunc);
+ofstream rt("rt.txt", ios::out | ios::trunc);
+
+void MyVeinsApp::initialize(int stage) {
+    DemoBaseApplLayer::initialize(stage);
+
+    if (stage == 0) {
+        sentMessage = false;
+        lastDroveAt = simTime();
+        currentSubscribedServiceId = -1;
+
+        cout.rdbuf(out.rdbuf());
+        cerr.rdbuf(test.rdbuf());
+        clog.rdbuf(rt.rdbuf());
+    }
+}
+
+int timeflag = 0;
+double i0_distance = -1;
+double i1_distance = -1;
+int i0_simtime = -1;
+double targetspeed = -1;
+double v0_distance = -1;
+double v1_distance = -1;
+double v0_targetdistance = -1;
+double v1_targetdistance = -1;
+int v0_simtime = -1;
+
+Coord i0Pos;
+Coord i1Pos;
+
+void MyVeinsApp::onWSM(BaseFrame1609_4 *frame) {
+    TraCIDemo11pMessage *wsm = dynamic_cast<TraCIDemo11pMessage*>(frame);
+
+}
+
+void MyVeinsApp::handleSelfMsg(cMessage *msg) {
+    DemoBaseApplLayer::handleSelfMsg(msg);
+}
+
+
+
+void MyVeinsApp::handlePositionUpdate(cObject *obj) {
+
+    TraCIDemo11pMessage *wsm = new TraCIDemo11pMessage();
+         populateWSM(wsm);
+         wsm->setDemoData(Msg);
+         wsm->setVehicleId(vehID);
+         wsm->setCarSenderPos(vPos);
+         sendDown(wsm);
+
+}

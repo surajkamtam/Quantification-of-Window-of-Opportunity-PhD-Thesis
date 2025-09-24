@@ -1,0 +1,57 @@
+#include "veins/modules/application/traci/MyVeinsApp.h"
+#include "veins/modules/application/traci/TraCIDemo11pRSUMessage_m.h"
+#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+
+#include <fstream>
+#include <vector>
+#include <iterator>
+#include <cstdlib>
+#include <string>
+#include <iostream>
+#include <unordered_map>
+
+using namespace veins;
+using namespace std;
+
+Define_Module(veins::MyVeinsApp);
+
+ofstream out("out.txt", ios::out | ios::trunc);
+
+void MyVeinsApp::initialize(int stage) {
+    DemoBaseApplLayer::initialize(stage);
+
+    if (stage == 0) {
+        sentMessage = false;
+        lastDroveAt = simTime();
+        currentSubscribedServiceId = -1;
+
+        cout.rdbuf(out.rdbuf());
+    }
+
+if (stage == 1) {
+    world_ = veins::FindModule<veins::BaseWorldUtility*>::findGlobalModule();
+    connManager_ = veins::FindModule<connection::Manager*>::findGlobalModule();
+    traceManager_ = veins::FindModule<logging::TraceManager*>::findGlobalModule();
+    nDos = par("nDosMessages");
+}
+}
+
+void MyVeinsApp::onWSM(BaseFrame1609_4 *frame) {
+TraCIDemo11pMessage *wsm = dynamic_cast<TraCIDemo11pMessage*>(frame);
+
+}
+
+void MyVeinsApp::handleSelfMsg(cMessage *msg) {
+DemoBaseApplLayer::handleSelfMsg(msg);
+}
+
+void MyVeinsApp::handlePositionUpdate(cObject *obj) {
+
+TraCIDemo11pMessage *wsm = new TraCIDemo11pMessage();
+populateWSM(wsm);
+wsm->setDemoData(Msg);
+wsm->setVehicleId(vehID);
+wsm->setCarSenderPos(vPos);
+sendDown(wsm);
+
+}

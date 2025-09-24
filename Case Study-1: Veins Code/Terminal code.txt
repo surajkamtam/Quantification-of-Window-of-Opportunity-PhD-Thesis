@@ -1,0 +1,13 @@
+For establishing connection between OMNETPP and SUMO
+/home/suraj/Downloads/Simulation/veins-5.2/bin/veins_launchd -vv -c /home/suraj/Downloads/Simulation/sumo/bin/sumo
+
+
+
+Go to this folder:
+cd /Downloads/vant/simulations/losTest1
+
+
+Run Following command for running omnetpp through terminal
+
+opp_run -r 0 -m -u Cmdenv -n ..:../../src:../../../veins-5.2/examples/veins:../../../veins-5.2/src/veins --image-path=../../../veins-5.2/images -l ../../../veins-5.2/src/veins omnetpp.ini
+

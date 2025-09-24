@@ -1,0 +1,125 @@
+#include "veins/modules/application/traci/MyVeinsApp.h"
+#include "veins/modules/application/traci/TraCIDemo11pRSUMessage_m.h"
+#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+
+#include <fstream>
+#include <cstdlib>
+#include <iostream>
+#include <random>
+
+using namespace veins;
+using namespace std;
+
+Define_Module(veins::MyVeinsApp);
+
+Coord vPos;
+bool DoSAttack = false;
+int msgflag;
+
+const char *vehID;
+double sP;  // Attack success probability
+int attackPolicy;  // Attack mode (0 = Persistent, 1 = Periodic, 2 = Sporadic)
+int nDos;  // Number of DoS messages
+simtime_t beaconInterval;  // Beacon interval (time between periodic beacon broadcasts)
+cMessage *attackTimer = nullptr;  // Timer for periodic attacks
+
+std::random_device rd;
+std::mt19937 generator(rd());
+std::uniform_real_distribution<double> distribution(0.0, 1.0);
+
+void MyVeinsApp::initialize(int stage) {
+    DemoBaseApplLayer::initialize(stage);
+
+    if (stage == 0) {
+        sentMessage = false;
+        lastDroveAt = simTime();
+        currentSubscribedServiceId = -1;
+    }
+
+    if (stage == 1) {
+        attackPolicy = par("attackPolicy");  // Get attack mode
+        sP = par("successProbability");  // Probability of attack
+        nDos = par("nDosMessages");
+        beaconInterval = par("beaconInterval");  // Beacon interval (time between beacon broadcasts)
+        messageReceiveVector.setName("Received Messages Timestamp");
+
+        EV << "Attack Policy: " << attackPolicy << " (0=Persistent, 1=Periodic, 2=Sporadic)\n";
+
+        if (attackPolicy == 0) {  // Persistent attack
+            DoSAttack = true;
+            EV << "Persistent Attack: Always active.\n";
+        }
+        else if (attackPolicy == 1) {  // Periodic attack
+            attackTimer = new cMessage("attackTimer");  // Unique timer for each node
+            scheduleAt(simTime() + beaconInterval, attackTimer);  // Schedule periodic attack based on beaconInterval
+            EV << "Periodic Attack: Triggering periodic attack every " << beaconInterval << " seconds.\n";
+        }
+        else if (attackPolicy == 2) {  // Sporadic attack
+            EV << "Sporadic Attack: Randomly triggering attack based on success probability.\n";
+        }
+    }
+}
+
+void MyVeinsApp::onWSM(BaseFrame1609_4* frame) {
+    TraCIDemo11pMessage* wsm = dynamic_cast<TraCIDemo11pMessage*>(frame);
+    if (wsm) {
+        if (DoSAttack) {
+            beaconInterval.setRaw(beaconInterval.raw() / nDos);  // For persistent attack, reduce the beacon interval
+            EV << "DoS Attack Active: Reduced beacon interval\n";
+            msgflag = 1;  // Attack message received
+        } else {
+            EV << "Normal Message Handling\n";
+            msgflag = 0;  // Normal message received
+        }
+
+        // Debug: Check what message is being received
+        EV << "Received message at time: " << simTime() << ", msgflag: " << msgflag << "\n";
+
+        messageReceiveVector.record(msgflag);  // Record the message reception for plotting
+    }
+}
+
+void MyVeinsApp::handleSelfMsg(cMessage* msg) {
+    if (msg == attackTimer && attackPolicy == 1) {  // Periodic attack
+        DoSAttack = true;  // Activate attack when the timer triggers
+        EV << "Periodic Attack Triggered at t=" << simTime() << "\n";
+
+        cancelEvent(attackTimer);  // Prevent duplicate scheduling
+        scheduleAt(simTime() + beaconInterval, attackTimer);  // Reschedule attack after the beacon interval
+
+        // Debug: Show attack interval
+        EV << "Next periodic attack scheduled at t=" << simTime() + beaconInterval << "\n";
+    }
+}
+
+void MyVeinsApp::handlePositionUpdate(cObject* obj) {
+    TraCIDemo11pMessage* wsm = new TraCIDemo11pMessage();
+
+    vehID = mobility->getExternalId().c_str();
+    vPos = mobility->getCurrentPosition();
+
+    wsm->setDemoData("Attack Test");
+    wsm->setVehicleId(vehID);
+    wsm->setCarSenderPos(vPos);
+    populateWSM(wsm);
+    sendDown(wsm);
+
+    // Handle Sporadic attack (random probability)
+    if (attackPolicy == 2) {  // Sporadic attack
+        double randomValue = distribution(generator);
+        if (randomValue <= sP) {
+            DoSAttack = true;
+            EV << "Sporadic Attack Triggered (Random Probability: " << randomValue << ")\n";
+        } else {
+            DoSAttack = false;  // No attack if random value exceeds success probability
+            EV << "No sporadic attack triggered this time (Random Value: " << randomValue << ")\n";
+        }
+    }
+}
+
+void MyVeinsApp::finish() {
+    if (attackTimer) {
+        cancelAndDelete(attackTimer);  // Proper cleanup
+        attackTimer = nullptr;
+    }
+}

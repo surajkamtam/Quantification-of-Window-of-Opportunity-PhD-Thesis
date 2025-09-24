@@ -1,0 +1,120 @@
+file 47612 1743506670                                           
+version 2
+run PersistentAttack-0-20250401-12:24:27-856991
+attr configname PersistentAttack
+attr datetime 20250401-12:24:27
+attr experiment PersistentAttack
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RSUExampleScenario3
+attr processid 856991
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.hacker[*].appl.attackPolicy 0
+param *.hacker[*].appl.nDosMessages 3
+param *.hacker[*].appl.successProbability 0
+param *.hacker[*].appl.attackInterval 0s
+param *.hacker[*].appl.beaconInterval 0.1s
+param *.playgroundSizeX 4000m
+param *.playgroundSizeY 4000m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"lostest1.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.node[*].nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.manager.moduleType "\"hacker=org.car2x.veins.nodes.Car target=org.car2x.veins.nodes.Car *=org.car2x.veins.nodes.Car\""
+param *.manager.moduleName "\"hacker=hacker target=target *=node\""
+param *.hacker[*].applType "\"AttackApp\""
+param *.hacker[*].appl.headerLength "80 bit"
+param *.hacker[*].appl.sendBeacons true
+param *.hacker[*].appl.dataOnSch false
+param *.hacker[*].veinsmobility.x 0
+param *.hacker[*].veinsmobility.y 0
+param *.hacker[*].veinsmobility.z 0
+param *.hacker[*].veinsmobility.setHostSpeed false
+param *.hacker[*].nic.mac1609_4.txPower 20mW
+param *.target[*].applType "\"TargetApp\""
+param *.target[*].appl.headerLength "80 bit"
+param *.target[*].appl.sendBeacons true
+param *.target[*].appl.dataOnSch false
+param *.target[*].appl.beaconInterval 1s
+param *.target[*].veinsmobility.x 0
+param *.target[*].veinsmobility.y 0
+param *.target[*].veinsmobility.z 0
+param *.target[*].veinsmobility.setHostSpeed false
+param *.target[*].nic.mac1609_4.txPower 20mW
+
+vector 0 RSUExampleScenario3.node[0].veinsmobility posx ETV
+vector 1 RSUExampleScenario3.node[0].veinsmobility posy ETV
+vector 2 RSUExampleScenario3.node[0].veinsmobility speed ETV
+vector 3 RSUExampleScenario3.node[0].veinsmobility acceleration ETV
+vector 4 RSUExampleScenario3.node[0].veinsmobility co2emission ETV
+vector 5 RSUExampleScenario3.node[1].veinsmobility posx ETV
+vector 6 RSUExampleScenario3.node[1].veinsmobility posy ETV
+vector 7 RSUExampleScenario3.node[1].veinsmobility speed ETV
+vector 8 RSUExampleScenario3.node[1].veinsmobility acceleration ETV
+vector 9 RSUExampleScenario3.node[1].veinsmobility co2emission ETV
+vector 10 RSUExampleScenario3.hacker[2].veinsmobility posx ETV
+vector 11 RSUExampleScenario3.hacker[2].veinsmobility posy ETV
+vector 12 RSUExampleScenario3.hacker[2].veinsmobility speed ETV
+vector 13 RSUExampleScenario3.hacker[2].veinsmobility acceleration ETV
+vector 14 RSUExampleScenario3.hacker[2].veinsmobility co2emission ETV
+vector 15 RSUExampleScenario3.target[3].veinsmobility posx ETV
+vector 16 RSUExampleScenario3.target[3].veinsmobility posy ETV
+vector 17 RSUExampleScenario3.target[3].veinsmobility speed ETV
+vector 18 RSUExampleScenario3.target[3].veinsmobility acceleration ETV
+vector 19 RSUExampleScenario3.target[3].veinsmobility co2emission ETV
+vector 20 RSUExampleScenario3.target[3].appl "Target Received Messages Timestamp" ETV
+4	4394 1995 21 3873 3 81 79 3.3796201545516 16.667383228151 398.7740446844 2525.3246198871
+3	6389 2161 21 3873 3 81 79 -0.11913516948 2.0815788158937 22.842721362299 44.150806300282
+2	8550 2024 12 3873 2 81 80 3.9069345298115 26.776883605351 1992.683500458 51653.287104746
+1	10574 1161 2 3873 1 81 81 20.2 20.2 1636.2 33051.24
+0	11735 2040 2 3873 1 81 81 31.15295481212 2013.1278779893 77246.92402987 103879137.29137
+14	13775 2117 453 4581 23 101 79 0.79704992876529 15.240159658112 394.51842279995 2568.3675455598
+13	15892 2281 453 4581 23 101 79 -0.51036742372325 2.0743784439541 22.419952474097 45.356606396343
+12	18173 2137 404 4581 22 101 80 4.1684899017556 26.654054291844 1981.0937404626 50980.687121923
+11	20310 1285 348 4581 21 101 81 20.2 23.4 1690.6 35423.08
+10	21595 2170 348 4581 21 101 81 31.191142610187 2000.9827988543 77008.983714973 103001139.67666
+9	23765 2313 148 4615 13 102 90 2.7282141545643 13.04511214114 353.72908201617 1740.3262462153
+8	26078 2525 148 4615 13 102 90 -0.10592713670805 2.2311155258003 18.648522834907 35.742798331558
+7	28603 2338 123 4615 12 102 91 4.2691849894953 22.955136258333 1983.9025648021 44451.171200593
+6	30941 1359 93 4615 11 102 92 20.2 20.2 1858.4 37539.68
+5	32300 2364 93 4615 11 102 92 31.185328237025 2006.1905234408 89171.130811382 119600064.81112
+20	34664 26 1605 1605 44.000526540377 44.000526540377 1 1 1 1 1
+19	34690 2733 1478 4668 43 142 100 2.2887166262238 12.078631069988 332.78598704919 1371.1562119529
+18	37423 2969 1478 4668 43 142 100 -0.11836218780139 2.1938620377285 16.47507070121 31.955687937139
+17	40392 2762 1416 4668 42 142 101 3.8863795804571 20.471494952289 1983.392860782 39786.335412491
+16	43154 1675 1353 4668 41 142 102 20.2 20.2 2060.4 41620.08
+15	44829 2782 1353 4668 41 142 102 31.168290355841 2006.4236967028 99868.826131187 133999457.13501
+

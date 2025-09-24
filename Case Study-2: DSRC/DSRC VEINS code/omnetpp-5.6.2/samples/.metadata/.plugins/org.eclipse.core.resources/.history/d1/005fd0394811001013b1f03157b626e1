@@ -1,0 +1,82 @@
+#include "veins/modules/application/traci/TargetApp.h"
+#include "veins/modules/application/traci/TraCIDemo11pRSUMessage_m.h"
+#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+
+#include <fstream>
+#include <cstdlib>
+#include <iostream>
+#include <random>
+
+using namespace veins;
+using namespace std;
+
+Define_Module(veins::TargetApp);
+
+Coord targetvPos;
+const char * AttackerID;
+bool targetDoSAttack = false;
+int targetmsgflag;
+simtime_t targetBeaInt;
+double targetspeed;
+//
+const char *targetvehID;
+double targetsP;  // Attack success probability
+simtime_t targetbeaconInterval;  // Beacon interval (time between periodic beacon broadcasts)
+cMessage *targetattackTimer = nullptr;  // Timer for periodic attacks
+
+ofstream out("out.txt", ios::out | ios::trunc);
+
+
+void TargetApp::initialize(int stage) {
+    DemoBaseApplLayer::initialize(stage);
+
+    if (stage == 0) {
+        sentMessage = false;
+        lastDroveAt = simTime();
+        currentSubscribedServiceId = -1;
+        cout.rdbuf(out.rdbuf());
+    }
+
+    if (stage == 1) {
+        targetsP = par("successProbability");  // Probability of attack
+        targetmessageReceiveVector.setName("Target Received Messages Timestamp");
+
+
+
+    }
+}
+
+void TargetApp::onWSM(BaseFrame1609_4* frame) {
+    TraCIDemo11pMessage* wsm = dynamic_cast<TraCIDemo11pMessage*>(frame);
+    if (wsm) {
+        targetmsgflag = wsm->getDoSMsgFlag();
+        AttackerID= wsm->getVehicleId();
+        targetBeaInt= wsm->getBeaInt();
+        cout<<targetspeed<<endl;
+        if(strcmp(AttackerID, "h0") == 0){
+        targetspeed = wsm->getLspeed();
+        traciVehicle->setSpeed(targetspeed);
+        }else{
+            traciVehicle->setSpeed(-1);
+        }
+
+        targetmessageReceiveVector.record(targetBeaInt);  // Record the message reception for plotting
+    }
+}
+
+void TargetApp::handleSelfMsg(cMessage* msg) {
+
+}
+
+void TargetApp::handlePositionUpdate(cObject* obj) {
+    TraCIDemo11pMessage* wsm = new TraCIDemo11pMessage();
+
+
+
+
+}
+
+
+void TargetApp::finish() {
+
+}

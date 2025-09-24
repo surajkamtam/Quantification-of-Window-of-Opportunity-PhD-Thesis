@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;veins/src/vasp/scenario/lostest1.add.xml&apos; to &apos;boston.add.xml&apos;" description="Rename resource &apos;lostest1.add.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/vasp/scenario/lostest1.add.xml" name="boston.add.xml" stamp="1742749470947" updateReferences="true"/>
+</session>

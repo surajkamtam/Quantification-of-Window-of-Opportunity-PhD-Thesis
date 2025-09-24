@@ -1,0 +1,185 @@
+#include "veins/modules/application/traci/MyVeinsApp.h"
+#include "veins/modules/application/traci/TraCIDemo11pRSUMessage_m.h"
+#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+
+#include <fstream>
+#include <vector>
+#include <iterator>
+#include <cstdlib>
+#include <string>
+#include <iostream>
+#include <unordered_map>
+
+using namespace veins;
+using namespace std;
+
+Define_Module(veins::MyVeinsApp);
+
+Coord vPos;
+std::string vehicleid;
+double vdistance, intdistance, targetdistance;
+double vtSpeed;
+Coord hackerposition, connectedposition;
+
+// Data structure to hold detected intermediate vehicles (iX) and their positions
+unordered_map<string, Coord> intermediateVehicles;
+unordered_map<string, Coord> vehiclesInfo;
+
+// Using ofstream with RAII for efficient file handling
+ofstream out("out.txt", ios::out | ios::trunc);
+ofstream test("test.txt", ios::out | ios::trunc);
+ofstream rt("rt.txt", ios::out | ios::trunc);
+
+void MyVeinsApp::initialize(int stage) {
+    DemoBaseApplLayer::initialize(stage);
+
+    if (stage == 0) {
+        sentMessage = false;
+        lastDroveAt = simTime();
+        currentSubscribedServiceId = -1;
+
+        cout.rdbuf(out.rdbuf());
+        cerr.rdbuf(test.rdbuf());
+        clog.rdbuf(rt.rdbuf());
+    }
+}
+
+int timeflag = 0;
+double i0_distance = -1;
+double i1_distance = -1;
+int i0_simtime = -1;
+double targetspeed = -1;
+double v0_distance = -1;
+double v1_distance = -1;
+double v0_targetdistance = -1;
+double v1_targetdistance = -1;
+int v0_simtime = -1;
+
+Coord i0Pos;
+Coord i1Pos;
+
+void MyVeinsApp::onWSM(BaseFrame1609_4 *frame) {
+    TraCIDemo11pMessage *wsm = dynamic_cast<TraCIDemo11pMessage*>(frame);
+    if (wsm) {
+        std::string msgType = wsm->getDemoData();
+        vehicleid = wsm->getVehicleId();
+        std::string targetid = mobility->getExternalId();
+
+        // Debug: Print incoming message details
+//        cout << "Received WSM. Type: " << msgType
+//             << ", From Vehicle ID: " << vehicleid
+//             << ", Target ID: " << targetid << endl;
+
+        if (msgType == "Direct") {
+            targetspeed = std::ceil(mobility->getSpeed() * 100.0) / 100.0;
+            clog << "Direct," << vehicleid << "," << v0_targetdistance << ","
+                 << simTime() << "," << targetspeed << ",0,1" << endl;
+//            cout << "Direct Message Sent. Distance: " << v0_targetdistance << endl;
+        } else if (msgType == "Indirect") {
+            double closestDistance = -1;
+            std::string closestID;
+            bool foundInRange = false;
+
+            // Check intermediate vehicles
+            for (const auto &entry : intermediateVehicles) {
+                const std::string &id = entry.first;
+                const Coord &pos = entry.second;
+                double distToHacker = vehiclesInfo["h0"].distance(pos);
+                double distToTarget = vehiclesInfo["v0"].distance(pos);
+
+//                cout << "Intermediate Vehicle ID: " << id
+//                     << ", Distance to Hacker: " << distToHacker
+//                     << ", Distance to Target: " << distToTarget << endl;
+
+                if (distToHacker <= 100 && distToTarget <= 100) {
+                    foundInRange = true;
+                    if (closestDistance == -1 || distToTarget < closestDistance) {
+                        closestDistance = distToTarget;
+                        closestID = id;
+                    }
+                }
+            }
+
+            if (foundInRange) {
+                clog << "Indirect," << vehicleid << "," << v0_targetdistance
+                     << "," << simTime() << "," << targetspeed << ",0,1" << endl;
+//                cout << "Indirect Message Sent. Closest Vehicle: " << closestID
+//                     << ", Distance: " << closestDistance << endl;
+            } else {
+//                cout << "No Intermediate Vehicle Found in Range." << endl;
+            }
+        }
+    }
+}
+
+void MyVeinsApp::handleSelfMsg(cMessage *msg) {
+    DemoBaseApplLayer::handleSelfMsg(msg);
+}
+
+void MyVeinsApp::sm(const char *vehID, const char *Msg, int n, Coord &vPos) {
+    for (int i = 0; i < n; ++i) {
+        TraCIDemo11pMessage *wsm = new TraCIDemo11pMessage();
+        populateWSM(wsm);
+        wsm->setDemoData(Msg);
+        wsm->setVehicleId(vehID);
+        wsm->setCarSenderPos(vPos);
+        sendDown(wsm);
+    }
+}
+
+void MyVeinsApp::handlePositionUpdate(cObject *obj) {
+    DemoBaseApplLayer::handlePositionUpdate(obj);
+
+    // Update position information
+    vPos = mobility->getCurrentPosition();
+    vtSpeed = std::ceil(mobility->getSpeed() * 100.0) / 100.0;
+    std::string vehiclesid = mobility->getExternalId();
+    vehiclesInfo[vehiclesid] = vPos;
+
+    // Debug: Print position updates
+    if (vehiclesid == "h0") {
+           cout << mobility->getExternalId().c_str() << "," << vPos << ","
+                   << vtSpeed << "," << simTime() << endl;
+       }
+
+       if (vehiclesid == "v0") {
+           cerr << mobility->getExternalId().c_str() << "," << vPos << ","
+                   << vtSpeed << "," << simTime() << endl;
+       }
+
+    // Add intermediate vehicles based on percentage logic
+    if (vehiclesid.find("veh0") == 0 || vehiclesid.find("veh1") == 0) {
+        size_t dotPosition = vehiclesid.find('.');
+        if (dotPosition != std::string::npos) {
+            std::string suffix = vehiclesid.substr(dotPosition + 1);
+            if (!suffix.empty() && std::all_of(suffix.begin(), suffix.end(), ::isdigit)) {
+                int numericSuffix = std::stoi(suffix);
+
+                int percentage = 1; // Adjust percentage for testing
+                if (numericSuffix % (100 / percentage) == 0) {
+                    intermediateVehicles[vehiclesid] = vPos;
+                    traciVehicle->setColor(TraCIColor(255, 165, 0, 255)); // Orange
+//                    cout << "Adding Intermediate Vehicle: " << vehiclesid
+//                         << ", Position: " << vPos << endl;
+                }
+            }
+        }
+    }
+
+    // Calculate target distances
+    Coord v0Pos = vehiclesInfo["v0"];
+    Coord h0Pos = vehiclesInfo["h0"];
+    v0_targetdistance = v0Pos.distance(h0Pos);
+
+    if (vehiclesid == "h0") {
+        const char *s1 = "Direct";
+        const char *s2 = "Indirect";
+        if (v0_targetdistance <= 100) {
+            sm(vehiclesid.c_str(), s1, 1, vPos);
+        } else {
+            sm(vehiclesid.c_str(), s2, 1, vPos);
+        }
+    }
+
+//    cout << "Intermediate Vehicles Count: " << intermediateVehicles.size() << endl;
+}

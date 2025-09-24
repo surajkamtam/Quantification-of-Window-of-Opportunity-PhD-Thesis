@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item key="DIALOG_X_ORIGIN" value="289"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="891"/>
+		<item key="DIALOG_HEIGHT" value="494"/>
+		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+	<section name="CResourceRenameRefactoringInputPage">
+		<item key="updateReferences" value="true"/>
+	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="changeSpeed"/>
+			<item value="setDeccel"/>
+			<item value="getDeccel"/>
+			<item value="setDecc"/>
+			<item value="setDecel"/>
+			<item value="getSignalPower"/>
+			<item value="serial"/>
+			<item value="setRecipientAddress"/>
+			<item value="rcvId"/>
+			<item value="unicast"/>
+			<item value="messageReceiveVector"/>
+			<item value="scalar"/>
+			<item value="beaconInterval"/>
+			<item value="DenialOfService"/>
+			<item value="json"/>
+			<item value="maliciousProbability_"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,6 @@
+<launch>
+    <copy file="boston.net.xml" />
+    <copy file="boston.rou.xml" />
+    <copy file="boston.sumo.cfg" type="config" />
+    
+</launch>

@@ -1,0 +1,2 @@
+
+(OMNeT++ IDE:13155): Gtk-WARNING **: 12:15:01.398: Negative content width -1 (allocation 1, extents 1x1) while allocating gadget (node scrolledwindow, owner GtkScrolledWindow)

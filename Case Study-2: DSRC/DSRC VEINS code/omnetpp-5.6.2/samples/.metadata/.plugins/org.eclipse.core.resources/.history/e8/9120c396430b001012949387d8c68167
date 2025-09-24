@@ -1,0 +1,96 @@
+file 28670 1743104491                                           
+version 2
+run Default-0-20250327-19:41:28-1316781
+attr configname Default
+attr datetime 20250327-19:41:28
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RSUExampleScenario3
+attr processid 1316781
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 4000m
+param *.playgroundSizeY 4000m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"lostest1.launchd.xml\")"
+param *.rsu[0].mobility.x 1775
+param *.rsu[0].mobility.y 1525
+param *.rsu[0].mobility.z 3
+param *.rsu[*].applType "\"TraCIDemoRSU11p\""
+param *.rsu[*].appl.headerLength "80 bit"
+param *.rsu[*].appl.sendBeacons false
+param *.rsu[*].appl.dataOnSch false
+param *.rsu[*].appl.beaconInterval 1s
+param *.rsu[*].appl.beaconUserPriority 7
+param *.rsu[*].appl.dataUserPriority 5
+param *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.node[*].nic.mac1609_4.txPower 20mW
+param *.rsu[*].nic.mac1609_4.txPower 15.5mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -89dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons false
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].manager.routeFile "\"lostest1.rou.xml\""
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[0].veinsmobility.accidentCount 0
+param *.node[0].veinsmobility.accidentStart 80s
+param *.node[0].veinsmobility.accidentDuration 200s
+param *.hacker[*].applType "\"MyVeinsApp\""
+param *.hacker[*].appl.headerLength "80 bit"
+param *.hacker[*].appl.sendBeacons true
+param *.hacker[*].appl.dataOnSch false
+param *.hacker[*].appl.beaconInterval 1s
+param *.hacker[*].appl.beaconUserPriority 7
+param *.hacker[*].appl.dataUserPriority 5
+param *.hacker[*].nic.phy80211p.antennaOffsetZ "0 m"
+
+vector 0 RSUExampleScenario3.node[0].veinsmobility posx ETV
+vector 1 RSUExampleScenario3.node[0].veinsmobility posy ETV
+vector 2 RSUExampleScenario3.node[1].veinsmobility posx ETV
+vector 3 RSUExampleScenario3.node[1].veinsmobility posy ETV
+vector 4 RSUExampleScenario3.node[0].veinsmobility speed ETV
+vector 5 RSUExampleScenario3.node[0].veinsmobility acceleration ETV
+vector 6 RSUExampleScenario3.node[0].veinsmobility co2emission ETV
+vector 7 RSUExampleScenario3.node[1].veinsmobility speed ETV
+vector 8 RSUExampleScenario3.node[1].veinsmobility acceleration ETV
+vector 9 RSUExampleScenario3.node[1].veinsmobility co2emission ETV
+9	3454 2604 924 2060 903 999 97 2.4155824296893 12.095179350264 339.18663979425 1480.1640714649
+8	6058 2826 924 2060 903 999 97 -0.11323688303586 2.2053118510917 17.268137733488 33.876484738046
+7	8884 2621 913 2060 902 999 98 3.8799905943332 21.192248039644 1987.5062868717 41228.007813505
+3	11505 1575 902 2060 901 999 99 29.8 29.8 2950.2 87915.96
+2	13080 2654 902 2060 901 999 99 39.669898238114 2018.8299096995 106059.16368302 149046598.11015
+6	15734 2741 913 2074 902 1003 102 2.3171055567321 12.247075878238 331.99179404608 1330.9446140765
+5	18475 2983 913 2074 902 1003 102 -0.1038955913228 2.1420549683203 16.200127306313 30.594458896298
+4	21458 2765 902 2074 901 1003 103 3.9210190495593 20.141104880823 1991.7345517071 39317.829136422
+1	24223 1658 901 2074 900 1003 104 20.2 20.2 2100.8 42436.16
+0	25881 2788 901 2074 900 1003 104 31.161532773088 2014.9316198049 102337.59138736 137882181.41668
+

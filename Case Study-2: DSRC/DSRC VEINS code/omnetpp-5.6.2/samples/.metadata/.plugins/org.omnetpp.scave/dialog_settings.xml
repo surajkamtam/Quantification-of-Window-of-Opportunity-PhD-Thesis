@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.omnetpp.scave.editors.ui.EditDialog">
+		<item key="DIALOG_X_ORIGIN" value="461"/>
+		<item key="DIALOG_Y_ORIGIN" value="344"/>
+		<item key="DIALOG_WIDTH" value="1766"/>
+		<item key="DIALOG_HEIGHT" value="918"/>
+		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+	<section name="ChartEditForm">
+		<item key="default-page" value="Lines"/>
+	</section>
+	<section name="org.omnetpp.scave.editors.ui.CreateChartTemplateDialog">
+		<item key="DIALOG_X_ORIGIN" value="363"/>
+		<item key="DIALOG_Y_ORIGIN" value="96"/>
+		<item key="DIALOG_WIDTH" value="720"/>
+		<item key="DIALOG_HEIGHT" value="448"/>
+		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+	<section name="org.omnetpp.scave.wizard.ScaveExportWizard">
+		<item key="JSON:pythonFlavoured" value="false"/>
+		<item key="JSON:skipResultAttributes" value="false"/>
+		<item key="JSON:precision" value="14"/>
+		<item key="JSON:useNumpy" value="true"/>
+		<item key="JSON:indentSize" value="4"/>
+	</section>
+	<section name="org.omnetpp.scave.editors.ui.DatasetSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="529"/>
+		<item key="DIALOG_Y_ORIGIN" value="70"/>
+		<item key="DIALOG_WIDTH" value="388"/>
+		<item key="DIALOG_HEIGHT" value="486"/>
+		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+</section>

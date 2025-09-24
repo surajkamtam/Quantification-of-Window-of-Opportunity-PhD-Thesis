@@ -1,0 +1,8 @@
+10:02:47 **** Incremental Build of configuration gcc-release for project veins ****
+make MODE=release -j22 all 
+make[1]: Entering directory '/home/suraj/Downloads/Simulation/veins-5.2/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/suraj/Downloads/Simulation/veins-5.2/src'
+
+10:02:47 Build Finished. 0 errors, 0 warnings. (took 175ms)
+

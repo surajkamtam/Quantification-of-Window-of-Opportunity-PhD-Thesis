@@ -1,0 +1,29 @@
+<routes>
+
+<route edges="gneE0 gneE1 gneE2" color="yellow" id="route_0" />
+    <route edges="-gneE2 -gneE1 -gneE0" color="yellow" id="route_1" />
+    
+ <vType id="type1" speedFactor="0.8" speedDev="0.2" probability="0.3" />
+
+ <vType id="type2" speedFactor="1.2" speedDev="0" probability="0.2" />
+
+<vType id="type3" speedFactor="0.6" speedDev="0.2" probability="0.3" />
+
+<vType id="type4" speedFactor="0.4" speedDev="0.2" probability="0.1" />
+
+<vType id="type5" speedFactor="0.3" speedDev="0.2" probability="0.1" />
+
+   <vTypeDistribution id="normalCar" vTypes="type1 type2 type3 type4 type5" />
+   
+       <vType id="hacker" color="red" />
+    <vType id="target" color="blue" />
+    <flow id="veh0" type="normalCar" from="gneE0" to="gneE2" departLane="0" begin="0" color="yellow" vehsPerHour="1400" />
+ <flow id="veh1" type="normalCar" from="gneE0" to="gneE2" departLane="1" begin="0" color="yellow" vehsPerHour="1400" /> 
+     <vehicle id="h0" depart="10.00" route="route_0" type="hacker">  
+     <stop parkingArea="pa_0" duration="3590" /> </vehicle> 
+     <vehicle id="v0" depart="905" route="route_0" type="target" />     
+ 
+
+   
+   
+   </routes>

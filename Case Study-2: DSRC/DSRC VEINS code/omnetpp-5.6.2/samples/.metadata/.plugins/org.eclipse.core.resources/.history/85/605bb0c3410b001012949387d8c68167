@@ -1,0 +1,409 @@
+[INIT] MyVeinsApp initialized (stage 0)
+[INIT] DoSAttack enabled, nDos = 4
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (31.153,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (34.2391,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (39.1543,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (46.0088,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (54.837,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (65.7327,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (78.7595,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (93.7077,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (110.583,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (129.315,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (149.911,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (172.487,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (197.134,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (223.59,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (250.315,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (277.024,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (303.734,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (330.459,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (357.18,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (383.909,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (410.626,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (437.336,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (464.054,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (490.783,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (517.504,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (544.137,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (570.842,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (597.575,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (624.287,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (651.007,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (677.752,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (704.493,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (731.218,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (757.938,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (784.654,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (811.364,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (838.064,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (864.789,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (891.516,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (918.224,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (944.938,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (971.643,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (998.385,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1025.09,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1051.81,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1078.51,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1105.21,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1131.92,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1158.63,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1185.33,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1212.06,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1238.74,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1265.45,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1292.17,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1318.89,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1345.59,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1372.28,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1399,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1425.7,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1452.4,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1479.11,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1505.82,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1532.43,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1559.16,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1585.86,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1612.56,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1639.28,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1665.98,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1692.69,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1719.4,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1746.1,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1772.82,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1799.52,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1826.28,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1852.99,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1879.7,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1906.41,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1933.12,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1959.83,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (1986.56,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+[handlePositionUpdate] Position update triggered.
+[handlePositionUpdate] Vehicle ID: v1 Position: (2013.27,20.2,0)
+[handlePositionUpdate] Message sent.
+[handleSelfMsg] Handling self message.
+[handleSelfMsg] Handling self message.
+
+End.

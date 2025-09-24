@@ -1,0 +1,19 @@
+[FINAL RESULTS]
+Test Loss (MSE): 0.6283
+Test MAE: 0.3833
+Test Precision: 0.9559
+Test Recall: 0.9546
+Test F1 Score: 0.9542
+3166/3166 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step  
+
+[TRAINING METRICS]
+Train Precision: 0.9594
+Train Recall: 0.9581
+Train F1 Score: 0.9578
+[INFO] Saving visualizations and final model weights...
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 21ms/step
+1939/1939 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step  
+[INFO] Final model weights saved!
+

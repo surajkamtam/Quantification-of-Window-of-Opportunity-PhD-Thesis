@@ -1,0 +1,84 @@
+import xml.etree.ElementTree as ET
+import subprocess
+import shutil
+import os
+
+def get_depart_value(rou_xml_file):
+    tree = ET.parse(rou_xml_file)
+    root = tree.getroot()
+
+    vehicle = root.find('.//vehicle')
+    if vehicle is not None:
+        return int(vehicle.get('depart'))
+    else:
+        raise ValueError("No vehicle definition found in the XML file.")
+
+def change_depart_value(rou_xml_file, depart_values, new_vehs_per_hour):
+    tree = ET.parse(rou_xml_file)
+    root = tree.getroot()
+
+    for flow in root.findall('.//flow'):
+        flow.set('vehsPerHour', str(new_vehs_per_hour))
+
+    # Update depart values for both vehicles
+    for vehicle in root.findall('.//vehicle'):
+        if vehicle.get('id') in depart_values:
+            vehicle.set('depart', str(depart_values[vehicle.get('id')]))
+
+    tree.write(rou_xml_file)
+
+def change_seed_value(launchd_xml_file, new_seed_value):
+    tree = ET.parse(launchd_xml_file)
+    root = tree.getroot()
+
+    for seed_element in root.iter('seed'):
+        seed_element.set('value', str(new_seed_value))
+
+    tree.write(launchd_xml_file)
+
+def execute_simulation(command):
+    subprocess.run(command, shell=True)
+
+if __name__ == "__main__":
+    base_folder = "/home/suraj/Downloads/Simulation/losTest1"
+    rou_xml_file_path = os.path.join(base_folder, "lostest1.rou.xml")
+    launchd_xml_file_path = os.path.join(base_folder, "lostest1.launchd.xml")
+    output_base_folder = "/home/suraj/Downloads/output_files1hopp260"
+
+    # Extracted depart values for vehicle v0 and io
+    depart_values_v0 = [900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915]
+    depart_values_io = [900, 900, 901, 901, 902, 902, 903, 903, 904, 904, 905, 905, 906, 906, 907, 907, 908]
+
+    simulation_runs = 50
+    vehs_per_hour_values = [500, 800, 900, 1100, 1300]
+
+    os.makedirs(output_base_folder, exist_ok=True)
+
+    base_command = "opp_run -r 0 -m -u Cmdenv -n .:../veins-5.2/examples/veins:../veins-5.2/src/veins --image-path=../veins-5.2/images -l ../veins-5.2/src/veins omnetpp.ini"
+
+    for vehs_per_hour in vehs_per_hour_values:
+        vehs_output_folder = os.path.join(output_base_folder, f"vehsPerHour_{vehs_per_hour}")
+        os.makedirs(vehs_output_folder, exist_ok=True)
+
+        for depart_value_v0, depart_value_io in zip(depart_values_v0, depart_values_io):
+            depart_output_folder = os.path.join(vehs_output_folder, f"depart_v0_{depart_value_v0}_io_{depart_value_io}")
+            os.makedirs(depart_output_folder, exist_ok=True)
+
+            for i in range(1, simulation_runs + 1):  # Run simulation 50 times for each depart value
+                seed_value = i
+
+                # Change depart values for vehicles id="v0" and id="io" in the rou.xml file
+                change_depart_value(rou_xml_file_path, {'v0': depart_value_v0, 'io': depart_value_io}, vehs_per_hour)
+
+                # Change seed value in the launchd.xml file
+                change_seed_value(launchd_xml_file_path, seed_value)
+
+                # Run simulation
+                execute_simulation(base_command)
+
+                # Copy output files directly to depart output folder
+                for file_name in ["out.txt", "rt.txt", "test.txt"]:
+                    src_file = os.path.join(base_folder, file_name)
+                    dest_file = os.path.join(depart_output_folder, f"{file_name.split('.')[0]}_{i}.txt")
+                    shutil.copy(src_file, dest_file)
+

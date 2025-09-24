@@ -1,0 +1,29 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <route edges="gneE0 gneE1 gneE2" color="yellow" id="route_0" />
+    <route edges="-gneE2 -gneE1 -gneE0" color="yellow" id="route_1" />
+    
+
+  <vType id="type1" speedFactor="0.8" speedDev="0.2" probability="0.3" />
+
+ <vType id="type2" speedFactor="1.2" speedDev="0" probability="0.2" />
+
+<vType id="type3" speedFactor="0.6" speedDev="0.2" probability="0.3" />
+
+<vType id="type4" speedFactor="0.4" speedDev="0.2" probability="0.1" />
+
+<vType id="type5" speedFactor="0.3" speedDev="0.2" probability="0.1" />
+
+   <vTypeDistribution id="typedist1" vTypes="type1 type2 type3 type4 type5" />
+     
+ 
+   <vehicle id="h0" depart="10.00" route="route_0" color="red">  
+     <stop parkingArea="pa_0" duration="3590" /> </vehicle>
+ <vehicle id="v0" depart="899" route="route_0" color="blue" /> 
+
+
+
+ 
+    
+     
+  
+</routes>

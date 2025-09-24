@@ -1,0 +1,103 @@
+version 2
+run General-0-20250327-18:34:30-1013776
+attr configname General
+attr datetime 20250327-18:34:30
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RSUExampleScenario3
+attr processid 1013776
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 4000m
+param *.playgroundSizeY 4000m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"lostest1.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.node[*].nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 0.1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*].appl.nDosMessages 4
+param *.manager.penetrationRate 0.62
+
+vector 0 RSUExampleScenario3.node[0].veinsmobility posx ETV
+vector 1 RSUExampleScenario3.node[0].veinsmobility posy ETV
+vector 2 RSUExampleScenario3.node[0].veinsmobility speed ETV
+vector 3 RSUExampleScenario3.node[0].veinsmobility acceleration ETV
+vector 4 RSUExampleScenario3.node[0].veinsmobility co2emission ETV
+0	901	900	31.15295481212
+0	1244	901	34.239050478587
+0	2676	902	39.142393007115
+0	8419	903	45.791786775716
+0	31442	904	54.455005127564
+0	90319	905	64.977151716108
+0	210593	906	77.33352678034
+0	576597	907	91.758844048815
+0	1925646	908	108.32013060357
+0	7206970	909	126.61531178308
+1	901	900	20.2
+1	1244	901	20.2
+1	2676	902	20.2
+1	8419	903	20.2
+1	31442	904	20.2
+1	90319	905	20.2
+1	210593	906	20.2
+1	576597	907	20.2
+1	1925646	908	20.2
+1	7206970	909	20.2
+2	1244	901	3.9069345298115
+2	2676	902	5.7144409994301
+2	8419	903	7.5180537319145
+2	31442	904	9.5176050355876
+2	90319	905	11.345441223754
+2	210593	906	13.271131502926
+2	576597	907	15.402642659904
+2	1925646	908	17.39241315686
+2	7206970	909	19.139813924207
+3	2676	902	1.8075064696185
+3	8419	903	1.8036127324845
+3	31442	904	1.9995513036731
+3	90319	905	1.8278361881664
+3	210593	906	1.9256902791723
+3	576597	907	2.1315111569781
+3	1925646	908	1.9897704969556
+3	7206970	909	1.7474007673469
+4	2676	902	3.8921651821406
+4	8419	903	4.7798028101976
+4	31442	904	6.2352301886279
+4	90319	905	6.7899753610119
+4	210593	906	8.1251386445548
+4	576597	907	10.102837287289
+4	1925646	908	10.775293311788
+4	7206970	909	10.741249469877
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ViewerSettings">
+		<item key="RSUExampleScenario3:scale" value="2.1969998"/>
+		<item key="RSUExampleScenario3:iconScale" value="0.64000005"/>
+		<item key="RSUExampleScenario:scale" value="2.1969998"/>
+	</section>
+	<section name="org.omnetpp.ned.editor.graph.misc.ParametersDialog">
+		<item key="DIALOG_X_ORIGIN" value="305"/>
+		<item key="DIALOG_Y_ORIGIN" value="88"/>
+		<item key="DIALOG_WIDTH" value="836"/>
+		<item key="DIALOG_HEIGHT" value="459"/>
+		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+	<section name="org.omnetpp.ned.editor.graph.dialogs.PropertiesDialog:submodule">
+		<item key="activePage" value="0"/>
+		<item key="DIALOG_X_ORIGIN" value="322"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="802"/>
+		<item key="DIALOG_HEIGHT" value="721"/>
+		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+</section>

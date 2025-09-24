@@ -1,0 +1,45 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid General-0-20250327-19:37:29-1297937 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t RSUExampleScenario3 n RSUExampleScenario3 cm 1
+MS id 1 d bgb=$playgroundSizeX,$playgroundSizeY
+MC id 2 c veins::ObstacleControl t org.car2x.veins.modules.obstacle.ObstacleControl pid 1 n obstacles
+MS id 2 d p=240,50;i=misc/town
+MC id 3 c veins::AnnotationManager t org.car2x.veins.modules.world.annotations.AnnotationManager pid 1 n annotations
+MS id 3 d p=260,50;i=msg/paperclip
+MC id 4 c veins::ConnectionManager t org.car2x.veins.base.connectionManager.ConnectionManager pid 1 n connectionManager
+MS id 4 d p=150,0;i=abstract/multicast
+MC id 5 c veins::BaseWorldUtility t org.car2x.veins.base.modules.BaseWorldUtility pid 1 n world
+MS id 5 d p=30,0;i=misc/globe
+MC id 6 c veins::TraCIScenarioManagerLaunchd t org.car2x.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd pid 1 n manager
+MS id 6 d p=512,128;i=block/network2
+MC id 7 c veins::RoadsCanvasVisualizer t org.car2x.veins.visualizer.roads.RoadsCanvasVisualizer pid 1 n roadsCanvasVisualizer
+MS id 7 d p=300,0;i=block/segm
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+- INFO (ConnectionManager)RSUExampleScenario3.connectionManager:max interference distance:2600
+ME
+MB sm 1 tm 5 m initialize(0)
+ME
+MB sm 1 tm 6 m initialize(0)
+ME
+MB sm 1 tm 7 m initialize(0)
+ME
+MB sm 1 tm 2 m initialize(1)
+ME
+MB sm 1 tm 4 m initialize(1)
+ME
+MB sm 1 tm 6 m initialize(1)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n connect pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n connect pe 0
+ES t 0
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n step pe -1
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n step pe 0
+ES t 1
+ME
+
+E # 1 t 0 m 6 ce 0 msg 0
+SE e 1 c 9 m "Attempted to read past end of byte buffer"

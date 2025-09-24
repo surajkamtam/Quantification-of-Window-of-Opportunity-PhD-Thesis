@@ -1,0 +1,76 @@
+file 15616 1743104725                                           
+version 2
+run General-0-20250327-19:45:21-1334520
+attr configname General
+attr datetime 20250327-19:45:21
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RSUExampleScenario3
+attr processid 1334520
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 4000m
+param *.playgroundSizeY 4000m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"lostest1.launchd.xml\")"
+param *.rsu[0].mobility.x 1775
+param *.rsu[0].mobility.y 1525
+param *.rsu[0].mobility.z 3
+param *.rsu[*].applType "\"TraCIDemoRSU11p\""
+param *.rsu[*].appl.headerLength "80 bit"
+param *.rsu[*].appl.sendBeacons false
+param *.rsu[*].appl.dataOnSch false
+param *.rsu[*].appl.beaconInterval 1s
+param *.rsu[*].appl.beaconUserPriority 7
+param *.rsu[*].appl.dataUserPriority 5
+param *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.node[*].nic.mac1609_4.txPower 20mW
+param *.rsu[*].nic.mac1609_4.txPower 15.5mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -89dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].manager.routeFile "\"lostest1.rou.xml\""
+param *.node[*].veinsmobility.setHostSpeed false
+param *.manager.penetrationRate 0.62
+
+vector 0 RSUExampleScenario3.node[0].veinsmobility posx ETV
+vector 1 RSUExampleScenario3.node[0].veinsmobility posy ETV
+vector 2 RSUExampleScenario3.node[0].veinsmobility speed ETV
+vector 3 RSUExampleScenario3.node[0].veinsmobility acceleration ETV
+vector 4 RSUExampleScenario3.node[0].veinsmobility co2emission ETV
+4	2680 2741 921 1931 902 1003 102 2.3171055567321 12.247075878238 331.99179404608 1330.9446140765
+3	5421 2983 921 1931 902 1003 102 -0.1038955913228 2.1420549683203 16.200127306313 30.594458896298
+2	8404 2765 911 1931 901 1003 103 3.9210190495593 20.141104880823 1991.7345517071 39317.829136422
+1	11169 1658 901 1931 900 1003 104 20.2 20.2 2100.8 42436.16
+0	12827 2788 901 1931 900 1003 104 31.161532773088 2014.9316198049 102337.59138736 137882181.41668
+

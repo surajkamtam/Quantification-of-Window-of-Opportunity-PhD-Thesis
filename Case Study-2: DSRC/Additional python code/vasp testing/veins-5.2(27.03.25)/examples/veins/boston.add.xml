@@ -1,0 +1,10 @@
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <edgeData id="1" file= "/home/suraj/Downloads/Simulation/EG.xml" edges="gneE1"/>
+    <laneAreaDetector id="detector1" lane="gneE1_0" pos="50" freq="60" file="/home/suraj/Downloads/Simulation/detector_output.xml"/>
+    <laneAreaDetector id="detector2" lane="gneE1_1" pos="50" freq="60" file="/home/suraj/Downloads/Simulation/detector_output.xml"/>
+      <laneAreaDetector id="detector3" lane="gneE2_0" pos="50" freq="60" file="/home/suraj/Downloads/Simulation/detector_output.xml"/>
+      <laneAreaDetector id="detector4" lane="gneE2_1" pos="50" freq="60" file="/home/suraj/Downloads/Simulation/detector_output.xml"/>
+        <laneAreaDetector id="detector5" lane="gneE0_0" pos="50" freq="60" file="/home/suraj/Downloads/Simulation/detector_output.xml"/>
+             <laneAreaDetector id="detector6" lane="gneE0_1" pos="50" freq="60" file="/home/suraj/Downloads/Simulation/detector_output.xml"/>
+    <parkingArea id="pa_0" lane="gneE1_0" startPos="500" endPos="510" roadsideCapacity="1"/>
+</additional>

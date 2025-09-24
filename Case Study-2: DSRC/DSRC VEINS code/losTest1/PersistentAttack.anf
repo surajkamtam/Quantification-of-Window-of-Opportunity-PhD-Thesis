@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/losTest1/results/PersistentAttack-*.vec"/>
+    <inputs name="/losTest1/results/PersistentAttack-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="t">
+      <items xsi:type="scave:Add" filterPattern="file(/losTest1/results/PersistentAttack-#0.vec) AND attr:configname(PersistentAttack) AND attr:runnumber(0) AND module(RSUExampleScenario3.target[656].appl) AND name(&quot;Target Received Messages Timestamp&quot;)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/losTest1/results/PersistentAttack-#0.vec) AND attr:configname(PersistentAttack) AND attr:runnumber(0) AND module(RSUExampleScenario3.target[656].veinsmobility) AND name(speed)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="file(/losTest1/results/PersistentAttack-#0.vec) AND attr:configname(PersistentAttack) AND attr:runnumber(0) AND module(RSUExampleScenario3.target[656].veinsmobility) AND name(acceleration)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="" lineNameFormat="">
+        <properties name="X.Axis.Title" value="Time"/>
+        <properties name="Y.Axis.Title" value="Values"/>
+        <properties name="Legend.Display" value="true"/>
+        <properties name="Line.Color/RSUExampleScenario3.target[656].veinsmobility acceleration" value="#ED333B"/>
+        <properties name="Line.Color/RSUExampleScenario3.target[656].veinsmobility speed" value="#5757B3"/>
+        <properties name="Line.Color/RSUExampleScenario3.target[656].appl Target Received Messages Timestamp" value="#F8E45C"/>
+        <properties name="Symbols.Size" value="5"/>
+        <properties name="Symbols.Size/RSUExampleScenario3.target[656].veinsmobility acceleration" value="5"/>
+        <properties name="Symbols.Size/RSUExampleScenario3.target[656].veinsmobility speed" value="5"/>
+        <properties name="Symbols.Size/RSUExampleScenario3.target[656].appl Target Received Messages Timestamp" value="5"/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.3"/>
+  </chartSheets>
+</scave:Analysis>

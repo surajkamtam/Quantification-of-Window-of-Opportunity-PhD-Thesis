@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -pthread -Wall -pedantic -Wextra -O3 -DNDEBUG -rdynamic CMakeFiles/testthreadpool.dir/ThreadPoolTest.cpp.o -o ../../../../../../bin/testthreadpool  -lpthread 

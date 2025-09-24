@@ -1,0 +1,11 @@
+DataTable.SCALAR.Experiment.width=254
+DataTable.SCALAR.Module.width=377
+DataTable.SCALAR.Name.width=257
+DataTable.SCALAR.Replication.width=103
+DataTable.SCALAR.Value.width=501
+DataTable.VECTOR.Mean.width=147
+DataTable.VECTOR.Module.width=291
+DataTable.VECTOR.Name.width=268
+DataTable.VECTOR.Replication.width=227
+DataTable.VECTOR.StdDev.width=152
+eclipse.preferences.version=1
