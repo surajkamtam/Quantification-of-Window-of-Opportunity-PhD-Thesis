@@ -1,0 +1,128 @@
+#include "veins/modules/application/traci/MyVeinsApp.h"
+#include "veins/modules/application/traci/TraCIDemo11pRSUMessage_m.h"
+#include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
+
+#include <fstream>
+#include <vector>
+#include <iterator>
+#include <cstdlib>
+#include <string>
+#include <cstdio>
+#include <iostream>
+#include <typeinfo>
+#include <set>
+#include <list>
+#include <random>
+#include <unordered_map>
+#include <unordered_set>
+
+using namespace veins;
+using namespace std;
+
+Define_Module(veins::MyVeinsApp);
+
+Coord vPos;
+const char *vehicleid = new char[20];
+//string allv;
+double vdistance;
+Coord vPos2;
+
+std::ofstream out("out.txt");
+std::ofstream test("test.txt");
+std::ofstream rt("rt.txt");
+
+void MyVeinsApp::initialize(int stage)
+
+{
+
+    DemoBaseApplLayer::initialize(stage);
+
+    if (stage == 0) {
+        sentMessage = false;
+        lastDroveAt = simTime();
+        currentSubscribedServiceId = -1;
+        cout.rdbuf(out.rdbuf());
+        cerr.rdbuf(test.rdbuf());
+        clog.rdbuf(rt.rdbuf());
+    }
+
+}
+
+void MyVeinsApp::onWSM(BaseFrame1609_4 *frame)
+
+{
+    string targetid;
+    Coord vPosv;
+
+    TraCIDemo11pMessage *wsm = dynamic_cast<TraCIDemo11pMessage*>(frame);
+    if (wsm) {
+        vehicleid = wsm->getVehicleId();
+        vPos2 = wsm->getCarSenderPos();
+        targetid = mobility->getExternalId();
+        if (targetid == "v0") {
+            vPosv = mobility->getCurrentPosition();
+            vdistance = vPosv.distance(vPos2);
+            clog << vehicleid << "," << vdistance << "," << simTime() << "," << 1 << endl;
+        }
+    }
+
+}
+
+void MyVeinsApp::handleSelfMsg(cMessage *msg)
+
+{
+    DemoBaseApplLayer::handleSelfMsg(msg);
+
+}
+
+void MyVeinsApp::sm(const char *vehID, const char *Msg, int n, Coord &vPos)
+{
+
+    for (int i = 0; i < n; ++i) {
+
+        TraCIDemo11pMessage *wsm = new TraCIDemo11pMessage();
+        populateWSM(wsm);
+        wsm->setDemoData(Msg);
+        wsm->setVehicleId(vehID);
+
+        wsm->setCarSenderPos(vPos);
+        sendDown(wsm);
+
+    }
+
+}
+
+void MyVeinsApp::handlePositionUpdate(cObject *obj)
+
+{
+    const char *vehID = new char[20];
+    double vSpeed;
+    const char *s1 = "Hello from Hacker";
+    Coord vPos;
+
+    DemoBaseApplLayer::handlePositionUpdate(obj);
+    vPos = mobility->getCurrentPosition();
+
+    vSpeed = std::ceil(mobility->getSpeed() * 100.0) / 100.0;
+    string sd = mobility->getExternalId();
+//    allv = mobility->getExternalId();
+    vehID = mobility->getExternalId().c_str();
+
+//
+//    clog<<vehID<<simTime()<<endl;
+    if (sd == "h0") {
+//        vPosh= mobility->getCurrentPosition();
+        sm(mobility->getExternalId().c_str(), s1, 1, vPos);
+        cout << mobility->getExternalId() << "," << vPos << "," << vSpeed << "," << simTime() << endl;
+
+    }
+
+    if (sd == "v0") {
+
+        cerr << mobility->getExternalId() << "," << vPos << "," << vSpeed << "," << simTime() << endl;
+
+    }
+
+    lastDroveAt = simTime();
+
+}
