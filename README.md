@@ -76,3 +76,16 @@ Additional
 ### Running Notebook 
 
 
+### Citation (BibTeX)
+```bibtex
+@article{kamtam2025wolves,
+  title={WOLVES: Window of Opportunity attack feasibility likelihood value estimation through a simulation-based approach},
+  author={Kamtam, Suraj Harsha and Lu, Qian and Rakib, Abdur and Ramli, Muhamad Azfar and Mepparambath, Rakhi Manohar and Shaikh, Siraj Ahmed and Nguyen, Hoang Nga},
+  journal={Computers \& Security},
+  pages={104549},
+  year={2025},
+  publisher={Elsevier}
+}
+
+
+
