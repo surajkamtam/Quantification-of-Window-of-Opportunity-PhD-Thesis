@@ -38,7 +38,7 @@ Five scenarios have been simulated:
 4. Dynamic Attacker in the opposite direction as a target on a Single carriageway
 5. Dynamic Attacker in the opposite direction as a target on a Dual carriageway
 
-Respective Python code to generate the scenario and save the data, processing the data can be found in the Case Study 1 folder
+Respective Python code to generate the scenario and save the data, processing the data can be found in the Case Study 1 folder.
 
 
 
