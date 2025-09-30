@@ -1,39 +1,31 @@
 # Threat Analysis and Probabilistic Quantification of Cyber-attack occurrence on Connected Vehicles using Window of Opportunity
 
-This repository provides the code used for prior and posterior information, along with the datasets used for the Bluetooth and DSRC case study.   
+This repository provides the datasets used for prior information from Highways England, as well as the VEINS code, which is utilised as likelihood information for both Bluetooth and DSRC case studies, respectively.  
 
+
+As a part of this research, the Window of Opportunity attack feasibility Likelihood Value Estimation through a Simulation-based approach (WOLVES) framework has been developed for computing Attack feasibility using the Window of Opportunity parameter in line with the TARA from ISO/SAE 21434 Standard. 
 
 ## WOLVES framework
 
+<img width="10455" height="5740" alt="WOframework_2024_10_31" src="https://github.com/user-attachments/assets/c1acb2bc-9466-4181-a860-ed54263960d4" />
 
-## Law of Total Probability
+## Window of Opportunity is computed based on the Law of Total Probability
+<img width="206" height="50" alt="image" src="https://github.com/user-attachments/assets/ed562b57-1b0a-43c9-88a4-106af3f44e33" />
 
-### Add some diagrams, equations, and algorithms
-
+<img width="446" height="60" alt="image" src="https://github.com/user-attachments/assets/319eb4d5-e0cc-4204-8089-afedae970463" />
 
 
 
 ## Prior information processing
-The data has been collected from Highways England. Then, Data cleaning, processing and PCU factor conversion have been performed for the selected 3 months of data. 
+The prior data has been collected from Highways England. Then, Data cleaning, processing, and PCU factor conversion were performed for the selected 3 months of data. 
 
-Add a map of the road segment from WebTris
+<img width="9355" height="2255" alt="Prior Probability Architecture" src="https://github.com/user-attachments/assets/8eef737d-081c-4833-83f2-bb9da8cfed4d" />
+
 
 ## Road Network
 For simulations, a road network has been created using NetEdit. The same road network has been used in both the case studies and all the scenarios. The only change required is the maximum free-flow speed of the network based on Single carriageway (60 mph) and Dual carriageway (70 mph). 
+<img width="686" height="170" alt="image" src="https://github.com/user-attachments/assets/18d9e02b-762b-4afa-a5b6-9464dd0e42c6" />
 
-
-## VEINS Framework
-### Diagram of the VEINS framework
-
-### Steps for installing VEINS
-
-### Steps for running VEINS
-
-
-
-## VEINS FOLDER structure
-
-### Important files to be modified
 
 
 ## Case Study-1
@@ -61,19 +53,15 @@ For this case study, a dynamic threshold is used, for which a base and attack sc
 
 The code used for training, testing, and validating the dynamic Threshold Computation using a GRU-Entropy-based anomaly detection model can be found in notebook xxx. The saved weights are xxx
 
-Also, the anomaly detection model's performance has been improved using the Youden J index.
+Additionally, the performance of the anomaly detection model has been improved using the Youden J index.
 
 
 
 
 ## Vulnerability data
-Additional 
+Additionally, some vulnerability information is provided; this can also be incorporated in the Window of Opportunity likelihood computation if particular vehicle models and makes that are affected are known. 
 
 
-
-## Code for HPC
-### Running VNC
-### Running Notebook 
 
 
 ### Citation 
