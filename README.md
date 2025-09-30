@@ -12,7 +12,7 @@ As a part of this research, the Window of Opportunity attack feasibility Likelih
 ## Window of Opportunity is computed based on the Law of Total Probability
 <img width="206" height="50" alt="image" src="https://github.com/user-attachments/assets/ed562b57-1b0a-43c9-88a4-106af3f44e33" />
 
-<img width="446" height="60" alt="image" src="https://github.com/user-attachments/assets/319eb4d5-e0cc-4204-8089-afedae970463" />
+
 
 
 
@@ -24,6 +24,7 @@ The prior data has been collected from Highways England. Then, Data cleaning, pr
 
 ## Road Network
 For simulations, a road network has been created using NetEdit. The same road network has been used in both the case studies and all the scenarios. The only change required is the maximum free-flow speed of the network based on Single carriageway (60 mph) and Dual carriageway (70 mph). 
+<br>
 <img width="686" height="170" alt="image" src="https://github.com/user-attachments/assets/18d9e02b-762b-4afa-a5b6-9464dd0e42c6" />
 
 
@@ -31,13 +32,13 @@ For simulations, a road network has been created using NetEdit. The same road ne
 ## Case Study-1
 Monte Carlo simulations have been performed using only SUMO-based functionality from the VEINS framework for a short-range Bluetooth scenario. 
 Five scenarios have been simulated:
-1. Static Attacker on Single carriageway
+1. Static Attacker on a Single carriageway
 2. Dynamic Attacker in the same direction as a target on a Single carriageway
 3. Dynamic Attacker in the same direction as a target on a Dual carriageway
 4. Dynamic Attacker in the opposite direction as a target on a Single carriageway
 5. Dynamic Attacker in the opposite direction as a target on a Dual carriageway
 
-Respective Python code to generate the scenario and save the data, processing the data can be found xxx 
+Respective Python code to generate the scenario and save the data, processing the data can be found in the Case Study 1 folder
 
 
 
@@ -49,9 +50,9 @@ Two scenarios have been simulated:
 1. Single Carriageway
 2. Dual Carriageway
 
-For this case study, a dynamic threshold is used, for which a base and attack scenarios had to be considered. The datasets generated for the attack and base can be found in the folder xxx. 
+For this case study, a dynamic threshold is used, for which a base and attack scenarios had to be considered. The datasets generated for the attack and base can be found in the Case Study 2 folder. 
 
-The code used for training, testing, and validating the dynamic Threshold Computation using a GRU-Entropy-based anomaly detection model can be found in notebook xxx. The saved weights are xxx
+The code used for training, testing, and validating the dynamic Threshold Computation using a GRU-Entropy-based anomaly detection model can be found in the Optimisation and Additional Optimisation folders. The saved weights are in the Training Folders in Case Study 2
 
 Additionally, the performance of the anomaly detection model has been improved using the Youden J index.
 
